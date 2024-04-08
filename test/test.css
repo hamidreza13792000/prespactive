@@ -1,0 +1,54 @@
+@keyframes hd{
+    0%{transform: rotate3d(0,0,0,0);}
+    100%{transform: rotate3d(0,1,0,360deg);}
+    
+}
+
+
+section{ 
+    width: 200px;
+	height: 200px;
+     perspective: 200px; 
+    transform-style: preserve-3d;
+    animation-name: hd;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+div{
+    width: 200px;
+	height: 200px;
+border: 2px solid;
+    font-weight: 900px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 50px;
+position: absolute;
+}
+
+.a{
+    
+    transform: rotatey(90deg);
+	transform-origin: left;
+}
+.s{
+    transform: rotateX(90deg);
+    transform-origin:bottom;
+    
+}
+
+.d{
+ transform:rotateX(-90deg);
+    transform-origin: top;
+    
+}
+.f{
+    transform:rotateY(-90deg);
+    transform-origin: right;
+}
+.g{
+    
+    transform: translateZ(-200px);
+    transform-origin: center;
+}

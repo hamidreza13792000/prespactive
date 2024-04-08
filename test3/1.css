@@ -1,0 +1,62 @@
+@keyframes ha {
+	0% {
+		transform: rotate3d(0, 0, 0, 0);
+	}
+	100% {
+		transform: rotate3d(0, 1, 0.2, 360deg);
+	}
+}
+main {
+	margin: 200px auto;
+	perspective: 1500px;
+}
+section {
+	margin: 200px auto;
+	width: 200px;
+	height: 200px;
+	border: 2px solid;
+	transform-style: preserve-3d;
+	animation: ha;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+div {
+	margin: 2px auto;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	line-height: 200px;
+	border: 2px solid;
+	position: absolute;
+}
+.a1 {
+    box-sizing: border-box;
+	transform: rotatey(90deg);
+	transform-origin: left;
+}
+.a2 {
+    box-sizing: border-box;
+	transform: rotatey(-90deg);
+	transform-origin: right;
+}
+.a3 {
+    box-sizing: border-box;
+	transform: rotateX(-90deg);
+	transform-origin: top;
+}
+.a4 {
+    box-sizing: border-box;
+	transform: rotatex(90deg);
+	transform-origin: bottom;
+}
+.a5 {
+    box-sizing: border-box;
+	transform: translateZ(-200px);
+	transform-origin: center;
+}
+.a6{
+    
+    transform-origin: center;
+    box-sizing: border-box;
+}

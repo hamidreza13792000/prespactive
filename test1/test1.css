@@ -1,0 +1,73 @@
+@keyframes h {
+	0% {
+		perspective-origin: center right;
+	}
+	25% {
+		perspective-origin: center bottom;
+	}
+	50% {
+		perspective-origin: center left;
+	}
+	75% {
+		perspective-origin: center top;
+	}
+	100% {
+		perspective-origin: center right;
+	}
+}
+section {
+	width: 600px;
+	height: 600px;
+	margin: 200px auto;
+	perspective: 200px;
+	perspective-origin: center top;
+}
+div {
+	margin: 200px auto;
+	margin-left: 200px;
+	width: 300px;
+	height: 300px;
+	border: 2px solid;
+	text-align: center;
+	line-height: 200px;
+	font-size: 40px;
+}
+.a1 {
+	position: absolute;
+	transform: rotateX(90deg);
+	transform-origin: bottom;
+}
+.a2 {
+	position: absolute;
+	transform: rotateY(-90deg);
+	transform-origin: right;
+}
+.a3 {
+	position: absolute;
+	transform: rotateY(90deg);
+	transform-origin: left;
+}
+.a4 {
+	position: absolute;
+	transform: rotateX(-90deg);
+	transform-origin: top;
+}
+.a5 {
+	position: absolute;
+	transform: rotateY(0deg);
+	transform-origin: center;
+}
+.a6 {
+	position: absolute;
+	transform: rotateY(180deg) translateZ(300px);
+	transform-origin: center;
+}
+.a5 {
+	position: absolute;
+	transform-origin: center;
+}
+section {
+	animation-name: h;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}

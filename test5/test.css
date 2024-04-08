@@ -1,0 +1,99 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.continer {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    transform-style: preserve-3d;
+    margin: 300px 300px;
+}
+
+.cupe {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(50deg) translateZ(-150px);
+}
+
+.continer .cupe div {
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    background-color: rgba(31, 1, 66, 0.658);
+    position: absolute;
+}
+
+
+/* ========================================================= */
+
+.continer .cupe :nth-child(1) {
+    transform: rotateY(0deg)translateZ(98px);
+}
+
+.continer .cupe :nth-child(2) {
+    transform: rotateY(90deg) translateZ(98px);
+}
+
+.continer .cupe :nth-child(3) {
+    transform: rotateY(-90deg) translateZ(98px);
+}
+
+.continer .cupe :nth-child(4) {
+    transform: rotateX(90deg) translateZ(98px);
+}
+
+.continer .cupe :nth-child(5) {
+    transform: rotateX(-90deg) translateZ(98px);
+}
+
+.continer .cupe :nth-child(6) {
+    transform: translateZ(-98px);
+}
+
+.continer .cupe {
+    transition: 5s;
+    animation: anim 10s infinite;
+}
+
+.continer .cupe:hover {
+    animation-play-state: paused;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    10% {
+        transform: rotate3d(1, 0, 1, 90deg);
+    }
+    20% {
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+    30% {
+        transform: rotate3d(1, 0, 0, 180deg);
+    }
+    40% {
+        transform: rotate3d(0, 1, 1, 1800deg);
+    }
+    50% {
+        transform: rotate3d(1, 0, 0, 90deg);
+    }
+    60% {
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+    70% {
+        transform: rotate3d(0, 0, 1, 90deg);
+    }
+    80% {
+        transform: rotate3d(1, 1, 1, 180deg);
+    }
+    90% {
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    100% {
+        transform: rotate3d(1, 0, 1, 180deg);
+    }
+}

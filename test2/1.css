@@ -1,0 +1,52 @@
+@keyframes ha {
+	0% {
+		transform: rotate3d(0, 0, 0, 0);
+	}
+	100% {
+		transform: rotate3d(0, 1, 0, 360deg);
+	}
+}
+main {
+	margin: 200px auto;
+	perspective: 195px;
+}
+section {
+	margin: 200px auto;
+	width: 200px;
+	height: 200px;
+	border: 2px solid;
+	transform-style: preserve-3d;
+	animation: ha;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+div {
+	margin: 2px auto;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	line-height: 200px;
+	border: 2px solid;
+	position: absolute;
+}
+.a1 {
+	transform: rotatey(90deg);
+	transform-origin: left;
+}
+.a2 {
+	transform: rotatey(-90deg);
+	transform-origin: right;
+}
+.a3 {
+	transform: rotateX(-90deg);
+	transform-origin: top;
+}
+.a4 {
+	transform: rotatex(90deg);
+	transform-origin: bottom;
+}
+.a5 {
+	transform: translateZ(-200px);
+	transform-origin: center;
+}
